@@ -4,32 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
+    <title>Cats and Dogs</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
-    <style>
-    .menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vw;
-      background: #fff;
-      display: grid;
-      place-content: center;
-    }
-    .header_menuBtn {
-      position: relative;
-      z-index: 10;
-    }
-    .noscroll,
-    .noscroll body {
-      overflow: hidden;
-    }
-    </style>
+    
   </head>
   <body>
-    <!-- https://emmet.io/ -->
-    <!-- header>h1{Test de menu} -->
     <header>
       <button aria-controls="mainNav"
       @click="menuIsOpen = ! menuIsOpen"
@@ -37,22 +17,19 @@
       >
         menu
       </button>
-      <h1>Test de menu</h1>
+      <h1>Cats and Dogs</h1>
       <nav
       id="mainNav" 
       x-show="menuIsOpen" 
-      x-transition.duration.300ms
+      x-collapse
       class="menu"
       >
       <ul>
-        <li><a href="#">item 1</a></li>
-        <li><a href="#">item 2</a></li>
-        <li><a href="#">item 3</a></li>
+      <li><a href="./cats/index.html">Cats</a></li>
+      <li><a href="./dogs/index.html">Dogs</a></li>
       </ul>
       </nav>
     </header>
-    <!-- h2>lorem2^p>lorem -->
-    <h2>Lorem, ipsum.</h2>
     <p>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
       mollitia adipisci alias error laboriosam numquam incidunt magni eum eos
