@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site multilingue</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    
+  </head>
+  <body>
+    <header>
+      <button aria-controls="mainNav"
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header_menuBtn"
+      >
+        menu
+      </button>
+      <h1>Accueil</h1>
+      <nav
+      id="mainNav" 
+      x-show="menuIsOpen" 
+      x-collapse
+      class="menu"
+      >
+      <ul>
+      <li>Option 1</li>
+      <li>Option 2</li>
+      </ul>
+      </nav>
+    </header>
+    <p>
+      texte en français
+    </p>
+  </body>
+</html>
